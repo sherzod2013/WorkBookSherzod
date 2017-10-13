@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Sherzod on 13/10/2017.
  */
-public class Work3 {
+public class Work4 {
     public static void main(String[] args) {
         String unli = "aoeiu";
         String word;
@@ -20,6 +20,6 @@ public class Work3 {
                     k++;
             }
         }
-        System.out.println(k);
+        System.out.println(word.length()-k);
     }
 }
