@@ -57,5 +57,23 @@ public class Compare2 {
         }
         timeAfter = System.currentTimeMillis();
         System.out.println(timeAfter-timeBefor);
+
+        System.out.println("---------TreeSet contains-----------");
+        timeBefor = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            list4.contains(i);
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+        System.out.println("---------Set contains-----------");
+        timeBefor = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            list3.contains(i);
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+
     }
 }
