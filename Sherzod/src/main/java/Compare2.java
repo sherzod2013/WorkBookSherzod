@@ -42,10 +42,57 @@ public class Compare2 {
         timeAfter = System.currentTimeMillis();
         System.out.println(timeAfter-timeBefor);
 
+        System.out.println("---------HashSet-----------");
+        HashSet<Integer> hashSet = new HashSet<>();
+        timeBefor = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            hashSet.add(i);
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+        System.out.println("--------------HashMap------------");
+        HashMap<Integer,User> hashMap  = new HashMap<>();
+        timeBefor = System.currentTimeMillis();
+        Random random  = new Random();
+        for (int i = 0; i < 10000; i++) {
+            User user = new User();
+            user.setMail("sherzod");
+            user.setName("Sherzod");
+            user.setId(i+1);
+            hashMap.put(i,user);
+
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+
         System.out.println("---------LinkedList contains-----------");
         timeBefor = System.currentTimeMillis();
         for (int i = 0; i < 10000; i++) {
             list.contains(i);
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+        System.out.println("---------HashSet contains-----------");
+        timeBefor = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            hashSet.contains(i);
+        }
+        timeAfter = System.currentTimeMillis();
+        System.out.println(timeAfter-timeBefor);
+
+        System.out.println("--------------HashMap contains------------");
+        timeBefor = System.currentTimeMillis();
+            for (int i = 0; i < 10000; i++) {
+            User user = new User();
+            user.setMail("sherzod");
+            user.setName("Sherzod");
+            user.setId(i+1);
+            hashMap.containsKey(i);
+            hashMap.containsValue(user);
+
         }
         timeAfter = System.currentTimeMillis();
         System.out.println(timeAfter-timeBefor);
